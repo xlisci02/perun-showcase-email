@@ -1,27 +1,6 @@
-# perun-showcase-email
+# Perun fuzz demonstration on Email Validation Regex
 
-```
-# clone
-git clone https://github.com/xlisci02/perun-showcase-email
-cd perun-showcase-email
-
-# build and run
-make
-time ./regex seed.txt
-time ./regex worst-case-muts/worst_case2.txt
-
-# to fuzz, first initialize as perun repo
-perun init --vsc-type=git --configure
-
-# create output directory for fuzzing
-mkdir output
-
-# fuzz example
-perun fuzz -b ./regex -w seed.txt -o output -t 900 -mp 2 -h 30 -mcs probabilistic
-```
-# Perun fuzz demonstration on UBT
-
-This is an example program that creates UBT, iteratively inserts elements to it and prints the final UBT.  The project was created to demonstrate the functionality of [Perun](https://github.com/xlisci02/perun) fuzzing machine. 
+This is an example program that is trying to match the line from file to harmful email validation regex using `std::regex_search`. The project was created to demonstrate the functionality of [Perun](https://github.com/xlisci02/perun) fuzzing machine. 
 
 
 ## Clone the repository
