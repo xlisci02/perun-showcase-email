@@ -17,5 +17,5 @@ perun init --vsc-type=git --configure
 mkdir output
 
 # fuzz example
-perun fuzz -b ./regex -w seed2.txt -o output -t 900 -mp 2 -h 30 -mcs probabilistic
+perun fuzz -b ./regex -w seed.txt -o output -t 900 -mp 2 -h 30 -mcs probabilistic
 ```
